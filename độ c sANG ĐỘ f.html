@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="1">
+<input type="button" onclick="ch()" value="chuyển">
+<script>
+  class temperature{
+    c;
+    constructor(c) {
+      this.c= c
+    }
+    getC(){
+      return this.c
+    }
+    setC(c){
+      return this.c= c
+    }
+    getChange(){
+      return  (this.c*1.8)+32
+    }
+    getChange1(){
+      return this.c - 273
+    }
+    toString(){
+      return "độ c sang độ f=" + this.getChange() + "độ c sang kv"+this.getChange1()
+    }
+  }
+  function ch(){
+    let check = new temperature(document.getElementById("1").value)
+    document.write(check.toString())
+  }
+
+</script>
+</body>
+</html>
